@@ -12,9 +12,11 @@ jobs:
         uses: juliangruber/read-file-action@v1
         with:
           path: ./README.md
-      - name: Get info from spotify
+      - name: Get info from spotify and write new readme
         id: spotify
         uses: ./
         with:
           content: ${{ steps.readFile.outputs.content }}
-          token: ${{ secrets.SPOTIFY_TOKEN }}
+          token: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
+          clientId: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          cliSecret: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
