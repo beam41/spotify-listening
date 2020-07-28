@@ -153,7 +153,7 @@ Updated at \`${new Date().toString()}\`
 |${dataSong.items
     .map(
       ({ href, name, artists }) =>
-        `<h5><a href="${href}">${name}</a></h5> <h6><a href="${artists.href}">${artists.name} </a><h6>`
+        `<p><b><a href="${href}">${name}</a></b></p> ${artists.map(v => `<a href="${v.href}">${v.name}</a>`).join(", ")}`
     )
     .join("|")}|
 
