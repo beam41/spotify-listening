@@ -17,3 +17,4 @@ jobs:
         uses: ./
         with:
           content: ${{ steps.readFile.outputs.content }}
+          token: ${{ secrets.SPOTIFY_TOKEN }}

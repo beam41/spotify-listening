@@ -1,10 +1,22 @@
 const core = require("@actions/core");
-const github = require("@actions/github");
+const fetch = require("node-fetch");
 
-try {
-  // `who-to-greet` input defined in action metadata file
+async function main() {
   const content = core.getInput("content");
+  const token = core.getInput("token");
   console.log(content);
-} catch (error) {
-  core.setFailed(error.message);
+  const res = await fetch(
+    "https://api.spotify.com/v1/me/top/artists?time_range=short_term&limit=5",
+    {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    }
+  );
+  const data = res.json();
+  console.log(data)
 }
+
+main().catch((err) => core.setFailed(err.message));
