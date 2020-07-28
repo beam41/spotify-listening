@@ -24,7 +24,11 @@ jobs:
           clientId: ${{ secrets.SPOTIFY_CLIENT_ID }}
           cliSecret: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
       - name: Get new readme data and create file
-        run: ${{ steps.spotify.outputs.content }} > README.md
+        uses: DamianReeves/write-file-action
+        with:
+          path: ./README.md
+          contents: ${{ steps.spotify.outputs.content }}
+          write-mode: overwrite
       - name: Commit file
         run: |
           git config --local user.email "action@github.com"
