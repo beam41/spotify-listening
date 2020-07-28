@@ -8,7 +8,7 @@ Get your top 5 artists from your Spotify account and write new readme
 | :---: | :---: | :---: | :---: | :---: |
 |<b>Joji</b>|<b>Madeon</b>|<b>Porter Robinson</b>|<b>The 1975</b>|<b>HONNE</b>|
 
-Updated at `Tue Jul 28 2020 12:58:06 GMT+0000 (Coordinated Universal Time)`
+Updated at `Tue Jul 28 2020 13:36:50 GMT+0000 (Coordinated Universal Time)`
 <!-- table end -->
 
 <!-- table song start -->
