@@ -76,7 +76,7 @@ Updated at \`${new Date().toString()}\`
   console.log("Artist data fetched");
   console.log("Write an artist table");
   // this code generate exacly 5 seperator but you can't change amount so I think it's work for now
-  const dataTableSong = `<!-- table start -->
+  const dataTableSong = `<!-- table song start -->
 |${dataSong.items
     // last image is smallest and it's enough
     .map(({ album }) => `<img src="${album.images[1].url}">`)
@@ -90,8 +90,8 @@ Updated at \`${new Date().toString()}\`
     .join("|")}|
 
 Updated at \`${new Date().toString()}\`
-<!-- table end -->`;
-  console.log("Write new readme");
+<!-- table song end -->`;
+  console.log("Write new readme for song");
   // might make it able to change placeholder text
   content = content.replace(
     /<!-- *table song start *-->[^]*<!-- *table song end *-->/gi,
