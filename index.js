@@ -21,6 +21,7 @@ async function main() {
     }),
   });
   const tokenRequestData = await tokenRequest.json();
+  console.log(tokenRequestData);
 
   const res = await fetch(
     "https://api.spotify.com/v1/me/top/artists?time_range=short_term&limit=5",
