@@ -101,6 +101,7 @@ async function main() {
     }
   );
   const data = await res.json();
+  console.log(data)
   const dataTable = `
 |${data.items
     .map(({ images }) => `<img src="${images[images.length - 1].url}">`)
