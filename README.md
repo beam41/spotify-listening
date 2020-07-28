@@ -5,5 +5,5 @@ spotify-listening
 | :---: | :---: | :---: | :---: | :---: |
 |<b>Joji</b>|<b>Madeon</b>|<b>Porter Robinson</b>|<b>The 1975</b>|<b>HONNE</b>|
 
-Updated at 12:22:31 GMT+0000 (Coordinated Universal Time)
+Updated at 12:24:51 GMT+0000 (Coordinated Universal Time)
 <!-- table end -->
