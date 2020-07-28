@@ -4,8 +4,8 @@ const fetch = require("node-fetch");
 async function main() {
   const content = core.getInput("content");
   const token = core.getInput("token");
-  const clientId = core.getInput("client_id");
-  const cliSecret = core.getInput("client_secret");
+  const clientId = core.getInput("clientId");
+  const cliSecret = core.getInput("cliSecret");
   const secret = `${clientId}:${cliSecret}`;
   const secretBase64 = Buffer.from(secret).toString("base64");
   const tokenRequest = await fetch("https://accounts.spotify.com/api/token", {
@@ -21,7 +21,6 @@ async function main() {
     }),
   });
   const tokenRequestData = await tokenRequest.json();
-  console.log(tokenRequestData);
 
   const res = await fetch(
     "https://api.spotify.com/v1/me/top/artists?time_range=short_term&limit=5",
