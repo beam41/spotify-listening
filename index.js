@@ -6,6 +6,7 @@ async function main() {
   const token = core.getInput("token");
   const clientId = core.getInput("clientId");
   const cliSecret = core.getInput("cliSecret");
+  // access token expired quickly so I have to use refresh token to get access token first
   console.log("Getting access token..");
   const secret = `${clientId}:${cliSecret}`;
   const secretBase64 = Buffer.from(secret).toString("base64");
@@ -24,6 +25,7 @@ async function main() {
   const tokenRequestData = await tokenRequest.json();
   console.log("Access token received");
   console.log("Fetch data");
+  // only get top 5 now might make it able to change amount later (if requested)
   const res = await fetch(
     "https://api.spotify.com/v1/me/top/artists?time_range=short_term&limit=5",
     {
@@ -37,8 +39,10 @@ async function main() {
   const data = await res.json();
   console.log("Data fetched");
   console.log("Write a table");
+  // this code generate exacly 5 seperator but you can't change amount so I think it's work for now
   const dataTable = `<!-- table start -->
 |${data.items
+    // last image is smallest and it's enough
     .map(({ images }) => `<img src="${images[images.length - 1].url}">`)
     .join("|")}|
 | :---: | :---: | :---: | :---: | :---: |
@@ -47,6 +51,7 @@ async function main() {
 Updated at \`${new Date().toString()}\`
 <!-- table end -->`;
   console.log("Write new readme");
+  // might make it able to change placeholder text
   content = content.replace(
     /<!-- *table start *-->[^]*<!-- *table end *-->/gi,
     dataTable
