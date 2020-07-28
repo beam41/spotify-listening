@@ -109,7 +109,7 @@ async function main() {
 |${data.items
     .map(({ images }) => `<img src="${images[images.length - 1].url}">`)
     .join("|")}|
-| :---: | :---: | :---: | :---: | :---: | :---: |
+| :---: | :---: | :---: | :---: | :---: |
 |${data.items.map(({ name }) => `<b>${name}</b>`).join("|")}|
 
 Updated at ${new Date().toTimeString()}
