@@ -24,7 +24,7 @@ jobs:
           clientId: ${{ secrets.SPOTIFY_CLIENT_ID }}
           cliSecret: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
       - name: Get new readme data and create file
-        uses: DamianReeves/write-file-action@v1
+        uses: DamianReeves/write-file-action@v1.0
         with:
           path: ./README.md
           contents: ${{ steps.spotify.outputs.content }}
