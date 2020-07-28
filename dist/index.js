@@ -112,7 +112,7 @@ async function main() {
 | :---: | :---: | :---: | :---: | :---: |
 |${data.items.map(({ name }) => `<b>${name}</b>`).join("|")}|
 
-Updated at ${new Date().toTimeString()}
+Updated at \`${new Date().toTimeString()}\`
 <!-- table end -->`;
   console.log("Write new readme");
   content = content.replace(

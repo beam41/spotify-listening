@@ -1,13 +1,21 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: "Spotify top 5 artists update"
+description: "Update the top 5 artists table in your readme"
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  content:
+    description: "Content of old readme"
     required: true
-    default: 'World'
+  token:
+    description: "Refresh token from Spotify"
+    required: true
+  clientId:
+    description: "Spotify app client id"
+    required: true
+  cliSecret:
+    description: "Spotify app client secret"
+    required: true
 outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  content:
+    description: "The updated readme data"
 runs:
-  using: 'node12'
-  main: 'dist/index.js'
+  using: "node12"
+  main: "dist/index.js"
