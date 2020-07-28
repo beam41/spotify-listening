@@ -116,7 +116,9 @@ async function main() {
     .map(({ images }) => `<img src="${images[images.length - 1].url}">`)
     .join("|")}|
 | :---: | :---: | :---: | :---: | :---: |
-|${dataArtist.items.map(({ name }) => `<b>${name}</b>`).join("|")}|
+|${dataArtist.items
+    .map(({ name, href }) => `<b><a href="${href}">${name}</a></b>`)
+    .join("|")}|
 
 Updated at \`${new Date().toString()}\`
 <!-- table end -->`;
