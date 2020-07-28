@@ -72,8 +72,8 @@ const fetch = __webpack_require__(795);
 async function main() {
   const content = core.getInput("content");
   const token = core.getInput("token");
-  const clientId = core.getInput("client_id");
-  const cliSecret = core.getInput("client_secret");
+  const clientId = core.getInput("clientId");
+  const cliSecret = core.getInput("cliSecret");
   const secret = `${clientId}:${cliSecret}`;
   const secretBase64 = Buffer.from(secret).toString("base64");
   const tokenRequest = await fetch("https://accounts.spotify.com/api/token", {
