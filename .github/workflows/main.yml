@@ -24,7 +24,7 @@ jobs:
           clientId: ${{ secrets.SPOTIFY_CLIENT_ID }}
           cliSecret: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
       - name: Get new readme data and create file
-        run: ${{ steps.spotify.outputs.data }} > README.md
+        run: ${{ steps.spotify.outputs.content }} > README.md
       - name: Commit file
         run: |
           git config --local user.email "action@github.com"
