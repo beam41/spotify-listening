@@ -24,9 +24,11 @@ async function main() {
   });
   const tokenRequestData = await tokenRequest.json();
   console.log("Access token received");
-  console.log("Fetch data");
+
+  // artists
+  console.log("Fetch artist data");
   // only get top 5 now might make it able to change amount later (if requested)
-  const res = await fetch(
+  const resArtist = await fetch(
     "https://api.spotify.com/v1/me/top/artists?time_range=short_term&limit=5",
     {
       headers: {
@@ -36,25 +38,64 @@ async function main() {
       },
     }
   );
-  const data = await res.json();
-  console.log("Data fetched");
-  console.log("Write a table");
+  const dataArtist = await resArtist.json();
+  console.log("Artist data fetched");
+  console.log("Write an artist table");
   // this code generate exacly 5 seperator but you can't change amount so I think it's work for now
-  const dataTable = `<!-- table start -->
-|${data.items
+  const dataTableArtist = `<!-- table start -->
+|${dataArtist.items
     // last image is smallest and it's enough
     .map(({ images }) => `<img src="${images[images.length - 1].url}">`)
     .join("|")}|
 | :---: | :---: | :---: | :---: | :---: |
-|${data.items.map(({ name }) => `<b>${name}</b>`).join("|")}|
+|${dataArtist.items.map(({ name }) => `<b>${name}</b>`).join("|")}|
+
+Updated at \`${new Date().toString()}\`
+<!-- table end -->`;
+  console.log("Write new readme for artist");
+  // might make it able to change placeholder text
+  content = content.replace(
+    /<!-- *table start *-->[^]*<!-- *table end *-->/gi,
+    dataTableArtist
+  );
+
+  // songs
+  console.log("Fetch artist data");
+  // only get top 5 now might make it able to change amount later (if requested)
+  const resSong = await fetch(
+    "https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=5",
+    {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${tokenRequestData.access_token}`,
+      },
+    }
+  );
+  const dataSong = await resSong.json();
+  console.log("Artist data fetched");
+  console.log("Write an artist table");
+  // this code generate exacly 5 seperator but you can't change amount so I think it's work for now
+  const dataTableSong = `<!-- table start -->
+|${dataSong.items
+    // last image is smallest and it's enough
+    .map(({ album }) => `<img src="${album.images[1].url}">`)
+    .join("|")}|
+| :---: | :---: | :---: | :---: | :---: |
+|${dataSong.items
+    .map(
+      ({ href, name, artists }) =>
+        `<h5><a href="${href}">${name}</a></h5> <h6><a href="${artists.href}">${artists.name} </a><h6>`
+    )
+    .join("|")}|
 
 Updated at \`${new Date().toString()}\`
 <!-- table end -->`;
   console.log("Write new readme");
   // might make it able to change placeholder text
   content = content.replace(
-    /<!-- *table start *-->[^]*<!-- *table end *-->/gi,
-    dataTable
+    /<!-- *table song start *-->[^]*<!-- *table song end *-->/gi,
+    dataTableSong
   );
   core.setOutput("content", content);
 }
