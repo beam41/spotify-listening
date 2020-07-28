@@ -117,7 +117,7 @@ async function main() {
     .join("|")}|
 | :---: | :---: | :---: | :---: | :---: |
 |${dataArtist.items
-    .map(({ name, uri }) => `<b><a href="${uri}">${name}</a></b>`)
+    .map(({ name }) => `<b>${name}</b>`)
     .join("|")}|
 
 Updated at \`${new Date().toString()}\`
@@ -154,9 +154,9 @@ Updated at \`${new Date().toString()}\`
 | :---: | :---: | :---: | :---: | :---: |
 |${dataSong.items
     .map(
-      ({ uri, name, artists }) =>
-        `<p><b><a href="${uri}">${name}</a></b></p> ${artists
-          .map((v) => `<a href="${v.uri}">${v.name}</a>`)
+      ({ name, artists }) =>
+        `<p><b>${name}</b></p> ${artists
+          .map((v) => v.name)
           .join(", ")}`
     )
     .join("|")}|
