@@ -4,17 +4,17 @@ Get your top 5 artists from your Spotify account and write new readme
 
 ## Example
 <!-- table start -->
-|<img src="https://i.scdn.co/image/5386e44d5e07dc662c0d6f14c3ae9c47e8898e06">|<img src="https://i.scdn.co/image/3f4c99a2932c2e21fc966123050cd92fe4ff0c15">|<img src="https://i.scdn.co/image/50c288dcdab974637f634438faeafbd4a96ece81">|<img src="https://i.scdn.co/image/1717dac024e71f64ec421a658c7a9769d41ce251">|<img src="https://i.scdn.co/image/8b9e5d9441a0208eca61b6a1f7fba5e390dd835d">|
+|<img src="https://i.scdn.co/image/5386e44d5e07dc662c0d6f14c3ae9c47e8898e06">|<img src="https://i.scdn.co/image/3f4c99a2932c2e21fc966123050cd92fe4ff0c15">|<img src="https://i.scdn.co/image/1717dac024e71f64ec421a658c7a9769d41ce251">|<img src="https://i.scdn.co/image/eab97005cbe754ca314c2d741fa4bc0a0b25c9ab">|<img src="https://i.scdn.co/image/97cc8b63e62072026056deb171bb41f52f506613">|
 | :---: | :---: | :---: | :---: | :---: |
-|<b><a href="https://api.spotify.com/v1/artists/3MZsBdqDrRTJihTHQrO6Dq">Joji</a></b>|<b><a href="https://api.spotify.com/v1/artists/4pb4rqWSoGUgxm63xmJ8xc">Madeon</a></b>|<b><a href="https://api.spotify.com/v1/artists/3dz0NnIZhtKKeXZxLOxCam">Porter Robinson</a></b>|<b><a href="https://api.spotify.com/v1/artists/3mIj9lX2MWuHmhNCA7LSCW">The 1975</a></b>|<b><a href="https://api.spotify.com/v1/artists/0Vw76uk7P8yVtTClWyOhac">HONNE</a></b>|
+|<b>Joji</b>|<b>Madeon</b>|<b>The 1975</b>|<b>LIONE</b>|<b>Troye Sivan</b>|
 
-Updated at `Tue Jul 28 2020 13:58:32 GMT+0000 (Coordinated Universal Time)`
+Updated at `Tue Aug 04 2020 06:36:33 GMT+0000`
 <!-- table end -->
 
 <!-- table song start -->
-|<img src="https://i.scdn.co/image/ab67616d00001e0299a3a1c380019cdc2ba9b8c2">|<img src="https://i.scdn.co/image/ab67616d00001e02dc384e6d13983fe1cd415ade">|<img src="https://i.scdn.co/image/ab67616d00001e025bb0f92c88480fb24dec0c31">|<img src="https://i.scdn.co/image/ab67616d00001e022057743ed6bf8bd21f5e68f2">|<img src="https://i.scdn.co/image/ab67616d00001e0260ba1d6104d0475c7555a6b2">|
+|<img src="https://i.scdn.co/image/ab67616d00001e0299a3a1c380019cdc2ba9b8c2">|<img src="https://i.scdn.co/image/ab67616d00001e0260ba1d6104d0475c7555a6b2">|<img src="https://i.scdn.co/image/ab67616d00001e02dc384e6d13983fe1cd415ade">|<img src="https://i.scdn.co/image/ab67616d00001e028a04c54425e5e1243d8b1e83">|<img src="https://i.scdn.co/image/ab67616d00001e020e5311993a01fb2e7169f6a7">|
 | :---: | :---: | :---: | :---: | :---: |
-|<p><b><a href="https://api.spotify.com/v1/tracks/59wlTaYOL5tDUgXnbBQ3my">A Moment Apart</a></b></p> <a href="https://api.spotify.com/v1/artists/21mKp7DqtSNHhCAU2ugvUw">ODESZA</a>|<p><b><a href="https://api.spotify.com/v1/tracks/3ArdPRbscsYB2uI70AzpuG">All My Friends</a></b></p> <a href="https://api.spotify.com/v1/artists/4pb4rqWSoGUgxm63xmJ8xc">Madeon</a>|<p><b><a href="https://api.spotify.com/v1/tracks/7zPAsqqz9M5qcpG42YUiug">Are We Still Young</a></b></p> <a href="https://api.spotify.com/v1/artists/2Hchwjfl1DioXcIwbOJkus">Grant</a>, <a href="https://api.spotify.com/v1/artists/4GqIsFywX1zYRiXreoyU34">Juneau</a>|<p><b><a href="https://api.spotify.com/v1/tracks/740g8hhl3ocPTZfZHCVQ6w">Stargazing</a></b></p> <a href="https://api.spotify.com/v1/artists/4wOqWyXZiVMLchDC2H9CyP">sapientdream</a>|<p><b><a href="https://api.spotify.com/v1/tracks/0rKtyWc8bvkriBthvHKY8d">SLOW DANCING IN THE DARK</a></b></p> <a href="https://api.spotify.com/v1/artists/3MZsBdqDrRTJihTHQrO6Dq">Joji</a>|
+|<p><b>A Moment Apart</b></p> ODESZA|<p><b>SLOW DANCING IN THE DARK</b></p> Joji|<p><b>All My Friends</b></p> Madeon|<p><b>3:00 AM</b></p> Finding Hope|<p><b>Nobody Compares To You (feat. Katie Pearlman)</b></p> Gryffin, Katie Pearlman|
 
-Updated at `Tue Jul 28 2020 13:58:32 GMT+0000 (Coordinated Universal Time)`
+Updated at `Tue Aug 04 2020 06:36:33 GMT+0000`
 <!-- table song end -->
