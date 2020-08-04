@@ -48,11 +48,9 @@ async function main() {
     .map(({ images }) => `<img src="${images[images.length - 1].url}">`)
     .join("|")}|
 | :---: | :---: | :---: | :---: | :---: |
-|${dataArtist.items
-    .map(({ name }) => `<b>${name}</b>`)
-    .join("|")}|
+|${dataArtist.items.map(({ name }) => `<b>${name}</b>`).join("|")}|
 
-Updated at \`${new Date().toString()}\`
+Updated at \`${new Date().toString().replace(/ *\([^]*\)/, "")}\`
 <!-- table end -->`;
   console.log("Write new readme for artist");
   // might make it able to change placeholder text
@@ -87,13 +85,11 @@ Updated at \`${new Date().toString()}\`
 |${dataSong.items
     .map(
       ({ name, artists }) =>
-        `<p><b>${name}</b></p> ${artists
-          .map((v) => v.name)
-          .join(", ")}`
+        `<p><b>${name}</b></p> ${artists.map((v) => v.name).join(", ")}`
     )
     .join("|")}|
 
-Updated at \`${new Date().toString()}\`
+Updated at \`${new Date().toString().replace(/ *\([^]*\)/, "")}\`
 <!-- table song end -->`;
   console.log("Write new readme for song");
   // might make it able to change placeholder text
