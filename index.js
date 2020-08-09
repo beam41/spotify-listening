@@ -6,6 +6,7 @@ async function main() {
   const token = core.getInput("token");
   const clientId = core.getInput("clientId");
   const cliSecret = core.getInput("cliSecret");
+
   // access token expired quickly so I have to use refresh token to get access token first
   console.log("Getting access token..");
   const secret = `${clientId}:${cliSecret}`;
