@@ -1,9 +1,8 @@
 on:
   push:
-    paths: 
-      - '**.js'
     paths-ignore: 
       - 'dist/**'
+      - README.md
 
 jobs:
   build:
