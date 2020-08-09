@@ -73,12 +73,12 @@ Updated at \`${new Date().toString().replace(/ *\([^]*\)/, "")}\`
     }
   );
   const dataSong = await resSong.json();
-  console.log("Artist data fetched");
-  console.log("Write an artist table");
+  console.log("Song data fetched");
+  console.log("Write an song table");
   // this code generate exacly 5 seperator but you can't change amount so I think it's work for now
   const dataTableSong = `<!-- table song start -->
 |${dataSong.items
-    // last image is smallest and it's enough
+    // last image is too small
     .map(({ album }) => `<img src="${album.images[1].url}">`)
     .join("|")}|
 | :---: | :---: | :---: | :---: | :---: |
