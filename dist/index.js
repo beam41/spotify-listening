@@ -40,7 +40,7 @@ module.exports =
 /******/ 	// the startup function
 /******/ 	function startup() {
 /******/ 		// Load entry module and return exports
-/******/ 		return __webpack_require__(251);
+/******/ 		return __webpack_require__(235);
 /******/ 	};
 /******/
 /******/ 	// run startup
@@ -63,11 +63,11 @@ module.exports = require("https");
 
 /***/ }),
 
-/***/ 251:
+/***/ 235:
 /***/ (function(__unusedmodule, __unusedexports, __webpack_require__) {
 
-const core = __webpack_require__(422);
-const fetch = __webpack_require__(795);
+const core = __webpack_require__(531);
+const fetch = __webpack_require__(734);
 
 async function main() {
   let content = core.getInput("content");
@@ -141,12 +141,12 @@ Updated at \`${new Date().toString().replace(/ *\([^]*\)/, "")}\`
     }
   );
   const dataSong = await resSong.json();
-  console.log("Artist data fetched");
-  console.log("Write an artist table");
+  console.log("Song data fetched");
+  console.log("Write an song table");
   // this code generate exacly 5 seperator but you can't change amount so I think it's work for now
   const dataTableSong = `<!-- table song start -->
 |${dataSong.items
-    // last image is smallest and it's enough
+    // last image is too small
     .map(({ album }) => `<img src="${album.images[1].url}">`)
     .join("|")}|
 | :---: | :---: | :---: | :---: | :---: |
@@ -180,7 +180,15 @@ module.exports = require("stream");
 
 /***/ }),
 
-/***/ 422:
+/***/ 464:
+/***/ (function(module) {
+
+module.exports = eval("require")("encoding");
+
+
+/***/ }),
+
+/***/ 531:
 /***/ (function(__unusedmodule, exports, __webpack_require__) {
 
 "use strict";
@@ -202,7 +210,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const command_1 = __webpack_require__(836);
+const command_1 = __webpack_require__(807);
 const os = __importStar(__webpack_require__(87));
 const path = __importStar(__webpack_require__(622));
 /**
@@ -409,14 +417,6 @@ exports.getState = getState;
 
 /***/ }),
 
-/***/ 538:
-/***/ (function(module) {
-
-module.exports = eval("require")("encoding");
-
-
-/***/ }),
-
 /***/ 605:
 /***/ (function(module) {
 
@@ -431,14 +431,7 @@ module.exports = require("path");
 
 /***/ }),
 
-/***/ 761:
-/***/ (function(module) {
-
-module.exports = require("zlib");
-
-/***/ }),
-
-/***/ 795:
+/***/ 734:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -603,7 +596,7 @@ FetchError.prototype.name = 'FetchError';
 
 let convert;
 try {
-	convert = __webpack_require__(538).convert;
+	convert = __webpack_require__(464).convert;
 } catch (e) {}
 
 const INTERNALS = Symbol('Body internals');
@@ -2088,14 +2081,14 @@ exports.FetchError = FetchError;
 
 /***/ }),
 
-/***/ 835:
+/***/ 761:
 /***/ (function(module) {
 
-module.exports = require("url");
+module.exports = require("zlib");
 
 /***/ }),
 
-/***/ 836:
+/***/ 807:
 /***/ (function(__unusedmodule, exports, __webpack_require__) {
 
 "use strict";
@@ -2191,6 +2184,13 @@ function escapeProperty(s) {
         .replace(/,/g, '%2C');
 }
 //# sourceMappingURL=command.js.map
+
+/***/ }),
+
+/***/ 835:
+/***/ (function(module) {
+
+module.exports = require("url");
 
 /***/ })
 
