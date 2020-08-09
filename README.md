@@ -8,7 +8,7 @@ Get your top 5 artists from your Spotify account and write new readme
 | :---: | :---: | :---: | :---: | :---: |
 |<b>Joji</b>|<b>Madeon</b>|<b>Porter Robinson</b>|<b>Troye Sivan</b>|<b>The 1975</b>|
 
-Updated at `Sun Aug 09 2020 14:17:43 GMT+0000`
+Updated at `Sun Aug 09 2020 14:23:48 GMT+0000`
 <!-- table end -->
 
 <!-- table song start -->
@@ -16,5 +16,5 @@ Updated at `Sun Aug 09 2020 14:17:43 GMT+0000`
 | :---: | :---: | :---: | :---: | :---: |
 |<p><b>A Moment Apart</b></p> ODESZA|<p><b>SLOW DANCING IN THE DARK</b></p> Joji|<p><b>All My Friends</b></p> Madeon|<p><b>Daylight</b></p> Joji, Diplo|<p><b>Main Theme - Stars At Our Backs</b></p> TADAYOSHI MAKINO|
 
-Updated at `Sun Aug 09 2020 14:17:43 GMT+0000`
+Updated at `Sun Aug 09 2020 14:23:48 GMT+0000`
 <!-- table song end -->
