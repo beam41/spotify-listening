@@ -1,4 +1,7 @@
-on: [push]
+on: 
+  push:
+    paths:
+      - 'dist/**'
 
 jobs:
   spotify-to-readme-job:
