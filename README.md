@@ -1,6 +1,6 @@
-# Spotify top 5 artists update
+# Spotify my top 5 artists update
 
-Get your top 5 artists from your Spotify account and write new readme
+Get your top 5 artists from your Spotify account and write new readme.
 
 ## Example
 <!-- table start -->
